@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("fonts/Gilroy-Bold.woff2") format("woff2"), url("fonts/Gilroy-Bold.woff") format("woff"), url("fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("fonts/Gilroy-Medium.woff2") format("woff2"), url("fonts/Gilroy-Medium.woff") format("woff"), url("fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #070707;
+}
+
+/*------------ОБЩИЕ КЛАССЫ------------*/
+._container {
+  padding: 0 250px;
+  margin: 0 auto;
+  max-width: 1445px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 123%;
+  text-align: center;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 123%;
+  text-align: center;
+}
+
+/*-------------HEADER----------------*/
+.menu {
+  position: relative;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 88px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu::after {
+  position: absolute;
+  top: 88px;
+  content: "";
+  width: 100%;
+  border: 1px solid #828282;
+}
+.menu__item a {
+  -webkit-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
+  color: #828282;
+  font-weight: 700;
+}
+.menu__item a:hover {
+  color: #070707;
+}
+
+.header-body {
+  margin: 40px 0 104px 0;
+}
+.header-body__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.header-body__title {
+  font-size: 47.32px;
+  max-width: 125px;
+  line-height: 123%;
+  font-weight: 700;
+}
+.header-body__about {
+  font-size: 18px;
+  line-height: 123%;
+  max-width: 157px;
+}
+.header-body__lang {
+  position: relative;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  font-size: 16px;
+  line-height: 123%;
+  font-weight: 700;
+  color: #828282;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.header-body__lang_active {
+  color: #070707;
+}
+.header-body__lang:not(:last-child) {
+  margin-bottom: 14px;
+}
+.header-body__lang:not(:last-child)::after {
+  content: "";
+  border: 1.5px solid #070707;
+  background-color: #070707;
+  position: absolute;
+  top: -9px;
+  width: 100%;
+}
+.header-body__image-body {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-body__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+.header-body__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*------------ABOUT ME-----------------*/
+.about-me {
+  background-color: #f6f6f6;
+  padding: 120px 0 107px 0;
+}
+.about-me__text-body {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 218px;
+}
+/*-----------------SKILLS-------------*/
+.skills {
+  padding: 91px 0 107px 0;
+}
+.skills__text {
+  margin-top: 69px;
+}
+.skills__row {
+  margin-top: 83px;
+}
+
+.row-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.row-skills__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.item-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.item-skills__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 90px;
+          flex: 0 1 90px;
+}
+.item-skills__image img {
+  width: 100%;
+  height: 100%;
+}
+.item-skills__text {
+  max-width: 71px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 123%;
+  color: #828282;
+  margin: 24px 0 40px 0;
+}
+.item-skills__stars :not(:last-child) {
+  margin-right: 9px;
+}
+/*---------------portfolio-------------*/
+.portfolio {
+  background-color: #f6f6f6;
+  padding: 113px 0 96px 0;
+}
+.portfolio__title {
+  margin-bottom: 53px;
+}
+.portfolio__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.portfolio__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+.portfolio__image img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio__text {
+  position: relative;
+}
+.portfolio__text a {
+  color: #070707;
+  text-decoration: underline;
+}
