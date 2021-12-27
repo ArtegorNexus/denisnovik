@@ -31,6 +31,15 @@ body {
    padding: 0 250px;
    margin: 0 auto;
    max-width: 1445px;
+   @media (max-width: 1336px) {
+      padding: 0 140px;
+   }
+   @media (max-width: 767px) {
+      padding: 0 70px;
+   }
+   @media (max-width: 479px) {
+      padding: 0 29px;
+   }
  }
 
 .title {
@@ -52,6 +61,7 @@ body {
    &__about-me {}
    &__skills {}
    &__portfolio {}
+   &__contacts {}
 }
 
 /*-------------HEADER----------------*/
@@ -177,10 +187,22 @@ body {
    }
 }
 .row-skills {
-   display: flex;
-   justify-content: space-between;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: -15px 0;
+   }
    &__item {
+      padding: 15px 0;
       flex: 0 1 25%;
+      @media (max-width: 1023px) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: 767px) {
+         flex: 0 1 100%;
+      }
    }
 }
 .item-skills {
@@ -189,7 +211,7 @@ body {
    align-items: center;
    justify-content: space-between;
    &__image {
-      flex: 0 1 90px;
+      max-width: 90px;
       img {
          width: 100%;
          height: 100%;
@@ -227,6 +249,9 @@ body {
    &__item {
       display: flex;
       flex-direction: column;
+      &:not(:last-child){
+         margin-bottom: 99px;
+      }
    }
    &__image {
       flex: 0 1 100%;
@@ -241,7 +266,53 @@ body {
          color: #070707;
          text-decoration: underline;
       }
+      margin-top: 49px;
    }
 }
 
+/*------------------CONTACTS-------------------*/  
 
+
+.contacts {
+   text-align: center;
+   padding: 115px 0 124px 0;
+   &__container {}
+   &__body {}
+   &__title {
+   }
+   &__text {
+      margin-top: 20px;
+   }
+   &__icons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 343px;
+      flex-wrap: wrap;
+      margin: 86px auto 0 auto;
+   }
+   &__item {
+      img {
+
+      }
+   }
+   &__button {
+      padding: 13px 0;
+      max-width: 181px;
+      margin: 30px auto 0 auto;
+      background-color: black;
+      border-radius: 21px;
+      a {
+         color: white;
+         font-size: 18px;
+         font-weight: 700;
+      }
+      @media (max-width: 480px) {
+         max-width: 100%;
+      }
+   }
+   &__light-text {
+      margin-top: 45px;
+      color: #828282;
+      line-height: $lh;
+   }
+}

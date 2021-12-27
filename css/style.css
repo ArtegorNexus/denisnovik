@@ -96,6 +96,21 @@ body {
   margin: 0 auto;
   max-width: 1445px;
 }
+@media (max-width: 1336px) {
+  ._container {
+    padding: 0 140px;
+  }
+}
+@media (max-width: 767px) {
+  ._container {
+    padding: 0 70px;
+  }
+}
+@media (max-width: 479px) {
+  ._container {
+    padding: 0 29px;
+  }
+}
 
 .title {
   font-weight: 700;
@@ -242,18 +257,39 @@ body {
   margin-top: 83px;
 }
 
-.row-skills {
+.row-skills__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px 0;
 }
 .row-skills__item {
+  padding: 15px 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
+}
+@media (max-width: 1023px) {
+  .row-skills__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+@media (max-width: 767px) {
+  .row-skills__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
 }
 
 .item-skills {
@@ -272,9 +308,7 @@ body {
           justify-content: space-between;
 }
 .item-skills__image {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 90px;
-          flex: 0 1 90px;
+  max-width: 90px;
 }
 .item-skills__image img {
   width: 100%;
@@ -308,6 +342,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.portfolio__item:not(:last-child) {
+  margin-bottom: 99px;
+}
 .portfolio__image {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
@@ -319,8 +356,52 @@ body {
 }
 .portfolio__text {
   position: relative;
+  margin-top: 49px;
 }
 .portfolio__text a {
   color: #070707;
   text-decoration: underline;
+}
+
+/*------------------CONTACTS-------------------*/
+.contacts {
+  text-align: center;
+  padding: 115px 0 124px 0;
+}
+.contacts__text {
+  margin-top: 20px;
+}
+.contacts__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 343px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 86px auto 0 auto;
+}
+.contacts__button {
+  padding: 13px 0;
+  max-width: 181px;
+  margin: 30px auto 0 auto;
+  background-color: black;
+  border-radius: 21px;
+}
+.contacts__button a {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (max-width: 480px) {
+  .contacts__button {
+    max-width: 100%;
+  }
+}
+.contacts__light-text {
+  margin-top: 45px;
+  color: #828282;
+  line-height: 123%;
 }
