@@ -20,7 +20,9 @@
 }
 $lh: 123%;
 
-
+html {
+   scroll-behavior: smooth;
+}
 body {
    font-family: 'Gilroy', sans-serif;
    color: #070707;
