@@ -131,6 +131,8 @@ body {
 }
 .menu-header {
   height: 88px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .menu-header__body {
   height: 100%;
@@ -185,11 +187,14 @@ body {
 @media (max-width: 767px) {
   .menu-header {
     position: fixed;
-    top: 0;
+    top: -100%;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: white;
+  }
+  .menu-header.active {
+    top: 0;
   }
 }
 
@@ -220,7 +225,7 @@ body {
   left: 0;
   top: 7px;
 }
-.burger:before {
+.burger::before {
   content: "";
   background: #070707;
   position: absolute;
@@ -228,8 +233,12 @@ body {
   height: 4px;
   left: 0;
   top: 0;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
-.burger:after {
+.burger::after {
   content: "";
   background: #070707;
   position: absolute;
@@ -237,11 +246,32 @@ body {
   height: 4px;
   left: 0;
   top: 14px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
 @media (max-width: 767px) {
   .burger {
     display: block;
   }
+  .burger.active {
+    position: fixed;
+    top: 50px;
+  }
+}
+.burger.active span {
+  width: 0%;
+}
+.burger.active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 8px;
+}
+.burger.active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 8px;
 }
 
 .content-header {

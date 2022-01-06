@@ -68,7 +68,6 @@ body {
 .header {
    position: relative;
    &__container {
-      
    }
    &__menu {
    }
@@ -115,13 +114,17 @@ body {
          }
       }
    }
+   transition: all 0.3s ease 0s;
    @media (max-width: 767px) {
       position: fixed;
-      top: 0;
+      top: -100%;
       left: 0;
       height: 100%;
       width: 100%;
       background-color: white;
+      &.active {
+         top: 0;
+      }
    }
 }
 .burger {
@@ -129,6 +132,7 @@ body {
    position: absolute;
    top: 10px;
    right: 0;
+   
    @media (max-width: 767px) {
       right: 70px;
    }
@@ -143,10 +147,11 @@ body {
       height: 4px;
       left: 0;
       top: 7px;
+      
    }
    width: 33px;
    height: 19px;
-   &:before {
+   &::before {
       content: '';
       background: #070707;
       position: absolute;
@@ -154,8 +159,9 @@ body {
       height: 4px;
       left: 0;
       top: 0;
+      transition: transform .3s ease 0s;
    }
-   &:after {
+   &::after {
       content: '';
       background: #070707;
       position: absolute;
@@ -163,9 +169,28 @@ body {
       height: 4px;
       left: 0;
       top: 14px;
+      transition: transform .3s ease 0s;
    }   
    @media (max-width: 767px) {
       display: block;
+      &.active {
+         position: fixed;
+         top: 50px;
+      }
+   }
+   &.active {
+      span {
+         width: 0%;
+         
+      }
+      &::before {
+         transform: rotate(45deg);
+         top: 8px;
+      }
+      &::after {
+         transform: rotate(-45deg);
+         top: 8px;
+      }
    }
 }
 .content-header {
