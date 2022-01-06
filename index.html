@@ -11,32 +11,36 @@
    <div class="wrapper">
       <header class="header">
          <div class="header__container _container">
-            <nav class="header__menu menu">
-               <ul class="menu__list">
-                  <li class="menu__item"><a href="#">Home</a></li>
-                  <li class="menu__item"><a href="#">About me</a></li>
-                  <li class="menu__item"><a href="#">Skills</a></li>
-                  <li class="menu__item"><a href="#">Portfolio</a></li>
-                  <li class="menu__item"><a href="#">Contacts</a></li>
-               </ul>
+            <div class="burger">
+               <span></span>
+            </div>
+            <nav class="header__menu menu-header">
+               <div class="menu-header__body">
+                  <ul class="menu-header__list">
+                     <li class="menu-header__link"><a href="#">Home</a></li>
+                     <li class="menu-header__link"><a href="#">About me</a></li>
+                     <li class="menu-header__link"><a href="#">Skills</a></li>
+                     <li class="menu-header__link"><a href="#">Portfolio</a></li>
+                     <li class="menu-header__link"><a href="#">Contacts</a></li>
+                  </ul>
+               </div>
             </nav>
-            <div class="header-body">
-               <div class="header-body__content">
-                  <div class="header-body__title">
-                     Denis Novik
+            <div class="header__content content-header">
+               
+                  <div class="content-header__cont">
+                     <div class="content-header__big-text">
+                        Denis Novik
+                     </div>
+                     <div class="content-header__text">UX | UI designer</div>
+                     <div class="content-header__text">24 years old, Minsk</div>
                   </div>
-                  <div class="header-body__about">
-                     UX | UI designer 24 years old, Minsk
+                  <div class="content-header__image">
+                     <img src="img/head.png" alt="header">
                   </div>
-                  <div class="header-body__langs">
-                     <p class="header-body__lang header-body__lang_active">ENG</p><p class="header-body__lang">RU</p>
+                  <div class="content-header__image_mobile">
+                     <img src="img/BSPP2266.png" alt="mobile">
                   </div>
-               </div>
-               <div class="header-body__image-body">
-                  <div class="header-body__image">
-                     <img src="img/head.png" alt="head">
-                  </div>
-               </div>
+                  
             </div>
          </div>
       </header>
@@ -170,5 +174,7 @@
          </div>
       </main>
    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="js/script.js"></script>
 </body>
 </html>
