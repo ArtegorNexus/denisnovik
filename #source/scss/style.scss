@@ -149,10 +149,11 @@ body {
       height: 4px;
       left: 0;
       top: 7px;
-      
+      transition: width .3s ease 0s;
    }
    width: 33px;
    height: 19px;
+   
    &::before {
       content: '';
       background: #070707;
@@ -161,7 +162,7 @@ body {
       height: 4px;
       left: 0;
       top: 0;
-      transition: transform .3s ease 0s;
+      transition: all .3s ease 0s;
    }
    &::after {
       content: '';
@@ -183,7 +184,6 @@ body {
    &.active {
       span {
          width: 0%;
-         
       }
       &::before {
          transform: rotate(45deg);
